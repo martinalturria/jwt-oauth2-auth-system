@@ -1,6 +1,5 @@
 import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
-import { OAuthUser } from '../models/User';
 import { addOAuthUser, findOAuthUser } from '../models/UserStore';
 import logger from './logger';
 

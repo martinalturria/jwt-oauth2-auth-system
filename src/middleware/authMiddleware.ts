@@ -1,16 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../utils/jwtUtils';
-import { JwtPayload } from '../models/User';
 import { HTTP_STATUS, ERROR_MESSAGES } from '../config/constants';
 import logger from '../config/logger';
-
-declare global {
-  namespace Express {
-    interface Request {
-      user?: JwtPayload;
-    }
-  }
-}
+import '../types/express';
 
 export const authenticate = (
   req: Request,

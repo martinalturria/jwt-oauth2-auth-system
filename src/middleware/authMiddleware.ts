@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 import { verifyToken } from '../utils/jwtUtils';
 import { HTTP_STATUS, ERROR_MESSAGES } from '../config/constants';
 import logger from '../config/logger';
-import '../types/express';
 
 export const authenticate = (
   req: Request,

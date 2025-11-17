@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { HTTP_STATUS } from '../config/constants';
-import '../types/express';
 
 export class ApiController {
   getUserArea = (req: Request, res: Response): void => {

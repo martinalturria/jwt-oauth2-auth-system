@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 import { UserRole } from '../models/User';
 import { HTTP_STATUS, ERROR_MESSAGES } from '../config/constants';
 import logger from '../config/logger';
-import '../types/express';
 
 export const authorize = (...allowedRoles: UserRole[]) => {
   return (req: Request, res: Response, next: NextFunction): void => {

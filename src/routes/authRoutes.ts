@@ -26,7 +26,6 @@ router.get(
   (req: Request, res: Response) => {
     const user = req.user as OAuthUser;
 
-    // Store OAuth user in memory
     addOAuthUser(user);
     logger.info(`OAuth user stored: ${user.email}`);
 
